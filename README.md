@@ -47,13 +47,19 @@ Bu sorunlar, veritabanına yüklenmeden önce pipeline tarafından temizlenir.
 
 ## How to Run / Nasıl Çalıştırılır
 
-### 1. Install dependencies / Bağımlılıkları kur
+### 1. Download the dataset / Veri setini indir
+
+Download the **Online Retail** dataset from [Kaggle](https://www.kaggle.com/datasets/vijayuv/onlineretail) and place the `data.csv` file in the project root directory.
+
+**Online Retail** veri setini [Kaggle](https://www.kaggle.com/datasets/vijayuv/onlineretail) adresinden indirip `data.csv` dosyasını proje ana dizinine yerleştirin.
+
+### 2. Install dependencies / Bağımlılıkları kur
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Configure credentials / Kimlik bilgilerini yapılandır
+### 3. Configure credentials / Kimlik bilgilerini yapılandır
 
 Copy the example file and fill in your MySQL credentials:
 
@@ -73,7 +79,7 @@ MYSQL_PASSWORD=your_password
 MYSQL_DATABASE=your_database
 ```
 
-### 3. Run the pipeline / Pipeline'ı çalıştır
+### 4. Run the pipeline / Pipeline'ı çalıştır
 
 ```bash
 python database_builder.py
