@@ -91,6 +91,5 @@ Script, veriyi yükledikten sonra aşağıdaki analizleri terminale yazdırır:
 - **Top 5 Products by Quantity Sold** / Satış adedine göre ilk 5 ürün
 
 ### Terminal Screenshot / Terminal Ekran Görüntüsü
+<img width="624" height="663" alt="image" src="https://github.com/user-attachments/assets/40d8ff8e-830c-4a80-9540-ad55e7600541" />
 
-<!-- Add your terminal screenshot here / Terminal ekran görüntünüzü buraya ekleyin -->
-<!-- ![Terminal Output](assets/terminal_output.png) -->
