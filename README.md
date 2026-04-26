@@ -96,17 +96,16 @@ python ml_forecaster.py
 
 ---
 
-## Output / Çıktı
+## Phase 1: ETL & SQL Analytics Output / ETL ve SQL Analitik Çıktısı
 
-The script prints the following analytics to the terminal after loading the data:
+The ETL pipeline prints the following analytics to the terminal after loading the data:
 
-Script, veriyi yükledikten sonra aşağıdaki analizleri terminale yazdırır:
+ETL hattı, veriyi yükledikten sonra aşağıdaki analizleri terminale yazdırır:
 
 - **Top 5 Countries by Revenue** / Ciroya göre ilk 5 ülke
 - **Top 5 Products by Quantity Sold** / Satış adedine göre ilk 5 ürün
 
-### Terminal Screenshot / Terminal Ekran Görüntüsü
-<img width="624" height="663" alt="Ekran görüntüsü 2026-04-24 184150" src="https://github.com/user-attachments/assets/18c2c3dd-ec0d-47e8-adb3-8f5ec14dc9b3" />
+<img width="624" height="663" alt="ETL Terminal Output" src="https://github.com/user-attachments/assets/18c2c3dd-ec0d-47e8-adb3-8f5ec14dc9b3" />
 
 ---
 
@@ -132,6 +131,8 @@ Bu aşamada, MySQL'de saklanan temizlenmiş satış verisi kullanılarak **Rando
 
 ### Forecast Output / Tahmin Çıktısı
 
-![Revenue Forecast](forecast_output.png)
+![ML Terminal Output](ml_terminal_output.png)
+
+![Revenue Forecast Chart](forecast_output.png)
 
 
