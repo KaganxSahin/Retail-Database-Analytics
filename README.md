@@ -2,11 +2,11 @@
 
 ## Project Purpose
 
-This project builds an end-to-end data pipeline that ingests raw retail transaction data from a CSV file, cleans and transforms it, loads it into a MySQL database, and runs analytical SQL queries to extract business insights. It demonstrates a real-world ETL (Extract, Transform, Load) workflow using Python's data ecosystem.
+This project is a full-stack data science platform that covers every stage of the analytics lifecycle. It starts with an ETL pipeline that ingests 540K+ real e-commerce transactions from CSV, cleans the data, and loads it into a MySQL database. It then runs SQL-based business analytics to surface key insights. Finally, it leverages machine learning (RandomForestRegressor) to forecast the next 7 days of daily revenue, complete with automated visualization.
 
 ## Proje Amacı
 
-Bu proje, ham perakende satış verisini CSV dosyasından okuyarak temizleyen, dönüştüren, MySQL veritabanına yükleyen ve iş zekası içgörüleri elde etmek için analitik SQL sorguları çalıştıran uçtan uca bir veri hattı (pipeline) oluşturur. Python veri ekosistemi kullanılarak gerçek dünya ETL (Extract, Transform, Load) iş akışını gösterir.
+Bu proje, analitik yaşam döngüsünün her aşamasını kapsayan kapsamlı bir veri bilimi platformudur. 540.000+ gerçek e-ticaret işlemini CSV'den alıp temizleyen ve MySQL veritabanına yükleyen bir ETL hattı ile başlar. Ardından SQL tabanlı iş analitiği ile temel içgörüleri ortaya çıkarır. Son olarak, makine öğrenmesi (RandomForestRegressor) kullanarak önümüzdeki 7 günün günlük cirosunu tahmin eder ve otomatik görselleştirme üretir.
 
 ---
 
