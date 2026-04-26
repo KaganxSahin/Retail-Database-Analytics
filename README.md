@@ -42,6 +42,9 @@ Bu sorunlar, veritabanına yüklenmeden önce pipeline tarafından temizlenir.
 | **SQLAlchemy** | Database connection & SQL query execution / Veritabanı bağlantısı ve SQL sorgu yürütme |
 | **PyMySQL** | MySQL driver for SQLAlchemy / SQLAlchemy için MySQL sürücüsü |
 | **python-dotenv** | Secure credential management via `.env` / `.env` ile güvenli kimlik bilgisi yönetimi |
+| **Scikit-Learn** | Machine learning model training & evaluation / Makine öğrenmesi model eğitimi ve değerlendirme |
+| **Matplotlib** | Data visualization & forecast plotting / Veri görselleştirme ve tahmin grafikleri |
+| **NumPy** | Numerical computing & array operations / Sayısal hesaplama ve dizi işlemleri |
 
 ---
 
@@ -85,6 +88,12 @@ MYSQL_DATABASE=your_database
 python database_builder.py
 ```
 
+### 5. Run the ML forecaster / ML tahmin modelini çalıştır
+
+```bash
+python ml_forecaster.py
+```
+
 ---
 
 ## Output / Çıktı
@@ -98,5 +107,31 @@ Script, veriyi yükledikten sonra aşağıdaki analizleri terminale yazdırır:
 
 ### Terminal Screenshot / Terminal Ekran Görüntüsü
 <img width="624" height="663" alt="Ekran görüntüsü 2026-04-24 184150" src="https://github.com/user-attachments/assets/18c2c3dd-ec0d-47e8-adb3-8f5ec14dc9b3" />
+
+---
+
+## Phase 2: AI & Time Series Forecasting
+
+This phase uses the cleaned sales data stored in MySQL to train a **RandomForestRegressor** model (scikit-learn) that predicts the next **7 days** of daily revenue. The system extracts data via SQLAlchemy, engineers time-series features, trains the model, evaluates its performance (MAE & R²), and generates a visual forecast chart.
+
+**Feature Engineering:** The pipeline aggregates transaction-level data into daily revenue totals, then creates the following features for the model:
+- `Day_of_Week` — Captures weekly seasonality patterns
+- `Month` — Captures monthly trends
+- `Rolling_Mean_7d` — 7-day moving average to smooth short-term fluctuations
+- `Day_Index` — Numeric trend indicator
+
+## Aşama 2: Yapay Zeka ve Gelecek Tahmini
+
+Bu aşamada, MySQL'de saklanan temizlenmiş satış verisi kullanılarak **RandomForestRegressor** modeli (scikit-learn) eğitilir ve önümüzdeki **7 günün** günlük cirosu tahmin edilir. Sistem SQLAlchemy ile veriyi çeker, zaman serisi özellikleri üretir, modeli eğitir, performansını değerlendirir (MAE & R²) ve görsel bir tahmin grafiği oluşturur.
+
+**Özellik Mühendisliği:** Pipeline, işlem bazlı veriyi günlük ciro toplamlarına dönüştürür, ardından model için şu özellikleri oluşturur:
+- `Day_of_Week` — Haftalık mevsimsellik kalıplarını yakalar
+- `Month` — Aylık trendleri yakalar
+- `Rolling_Mean_7d` — Kısa vadeli dalgalanmaları düzleştiren 7 günlük hareketli ortalama
+- `Day_Index` — Sayısal trend göstergesi
+
+### Forecast Output / Tahmin Çıktısı
+
+![Revenue Forecast](forecast_output.png)
 
 
