@@ -19,6 +19,8 @@ venv/
 .DS_Store
 Thumbs.db
 
-# Data files (too large for git - download from Kaggle)
-data.csv
+# Data files - NEVER push real sales data
+*.csv
+*.xlsx
+*.xls
 
